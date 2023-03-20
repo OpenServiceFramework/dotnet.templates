@@ -1,7 +1,7 @@
 # Build Args
 ARG SDK_IMAGE
 ARG RUNTIME_IMAGE
-ARG CMD
+ARG CMD="./ProjectName"
 ARG LOCKED_MODE="--locked-mode"
 ARG BUILD_CONFIG=Release
 
