@@ -1,5 +1,5 @@
-SDK_IMAGE := mcr.microsoft.com/dotnet/sdk:7.0-jammy
-RUNTIME_IMAGE := mcr.microsoft.com/dotnet/aspnet:7.0-jammy
+SDK_IMAGE := mcr.microsoft.com/dotnet/sdk:7.0
+RUNTIME_IMAGE := mcr.microsoft.com/dotnet/aspnet:7.0
 DOCKER_FILE := dockerfile
 PLATFORM := linux/arm64
 RUNTIME_ENV := develop
