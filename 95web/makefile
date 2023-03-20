@@ -1,7 +1,7 @@
 SDK_IMAGE := mcr.microsoft.com/dotnet/sdk:7.0-jammy
 RUNTIME_IMAGE := mcr.microsoft.com/dotnet/aspnet:7.0-jammy
 DOCKER_FILE := dockerfile
-PLATFORM := linux/amd64
+PLATFORM := linux/arm64
 RUNTIME_ENV := develop
 BUILD_CONFIG := debug
 IMAGE_NAME := $(shell basename ${PWD} | tr '.' '/')
@@ -59,11 +59,11 @@ run:
 		--env CMD="./ProjectName" \
 		"${IMAGE_NAME}:${COMMIT_ID}"
 
-recreate-lock-files:
+recreate-lock-files: pull
 	@echo "Recreate lock files ..."
 	@docker run --interactive --rm \
 		--platform ${PLATFORM} \
 		--volume "${PWD}/src:/src" \
 		--workdir "/src" \
 		${SDK_IMAGE} \
-			dotnet restore /src --verbosity normal
+			dotnet restore --use-lock-file --force-evaluate --verbosity normal
