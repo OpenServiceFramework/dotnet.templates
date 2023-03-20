@@ -1,0 +1,39 @@
+# Build Args
+ARG SDK_IMAGE
+ARG RUNTIME_IMAGE
+ARG CMD
+ARG LOCKED_MODE="--locked-mode"
+ARG BUILD_CONFIG=Release
+
+###########################################################################
+###########################################################################
+
+# Use .Net Core SDK to build
+FROM ${SDK_IMAGE} AS build
+WORKDIR /src
+
+# Copy project/solution files & restore 
+COPY src/*.csproj src/packages.lock.json ./
+RUN dotnet restore ${LOCKED_MODE} --verbosity detailed
+
+# Copy code files
+COPY src/. .
+
+# Build
+RUN dotnet publish -c ${BUILD_CONFIG} -o /out \
+  --no-restore /p:PublishTrimmed=false /p:PublishReadyToRun=false \
+  --self-contained false
+
+###########################################################################
+###########################################################################
+
+# Final stage for runtime
+FROM ${RUNTIME_IMAGE} AS runtime
+
+WORKDIR /app
+COPY --from=build /out ./
+
+ADD https://github.com/grpc-ecosystem/grpc-health-probe/releases/latest/download/grpc_health_probe-linux-amd64 ./
+RUN chmod +x ./grpc_health_probe-linux-amd64
+
+CMD [ ${CMD} ]
