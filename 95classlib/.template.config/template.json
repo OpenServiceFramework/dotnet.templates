@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "95octane",
+  "classifications": [ "Common", "Library" ],
+  "identity": "95octane.Templates.ClassLibrary.CSharp",
+  "name": "Class Library (95octane)",
+  "shortName": "95classlib",
+  "sourceName": "ProjectName",
+  "tags": { "language": "C#", "type": "project" }
+}

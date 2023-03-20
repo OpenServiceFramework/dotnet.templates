@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "95octane",
+  "classifications": [ "Web", "gRPC" ],
+  "identity": "95octane.Templates.gRPC.CSharp",
+  "name": "ASP.NET Core gRPC Service (95octane)",
+  "shortName": "95grpc",
+  "sourceName": "ProjectName",
+  "tags": { "language": "C#", "type": "project" }
+}

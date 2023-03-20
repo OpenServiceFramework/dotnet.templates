@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "95octane",
+  "classifications": [ "Common", "Worker", "Web" ],
+  "identity": "95octane.Templates.Worker.CSharp",
+  "name": "Worker Service (95octane)",
+  "shortName": "95worker",
+  "sourceName": "ProjectName",
+  "tags": { "language": "C#", "type": "project" }
+}

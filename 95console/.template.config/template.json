@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "95octane",
+  "classifications": [ "Common", "Console" ],
+  "identity": "95octane.Templates.Console.CSharp",
+  "name": "Console App (95octane)",
+  "shortName": "95console",
+  "sourceName": "ProjectName",
+  "tags": { "language": "C#", "type": "project" }
+}
