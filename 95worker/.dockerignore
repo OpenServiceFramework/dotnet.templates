@@ -1,0 +1,15 @@
+*.log
+.dockerignore
+.git
+.gitignore
+.github
+deploy/
+docs/
+.vscode
+LICENSE
+README.md
+makefile
+bin/
+obj/
+out/
+TestResults/
