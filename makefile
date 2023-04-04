@@ -6,5 +6,6 @@ all: $(TMPLS)
 
 $(TMPLS):
 	@cp -rv ./common/* ./$@
+	@cp -rv ./common/.github ./$@
 	@cp -rv ./common/.gitignore ./$@
 	@cp -rv ./common/.dockerignore ./$@
