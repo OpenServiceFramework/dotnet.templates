@@ -1,10 +1,10 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "95octane",
+  "author": "OpenServiceFramework",
   "classifications": [ "Web", "gRPC" ],
-  "identity": "95octane.Templates.gRPC.CSharp",
-  "name": "ASP.NET Core gRPC Service (95octane)",
-  "shortName": "95grpc",
+  "identity": "OpenServiceFramework.Templates.gRPC.CSharp",
+  "name": "ASP.NET Core gRPC Service (OpenServiceFramework)",
+  "shortName": "osf.grpc",
   "sourceName": "ProjectName",
   "tags": { "language": "C#", "type": "project" }
 }

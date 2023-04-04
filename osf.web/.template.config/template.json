@@ -1,10 +1,10 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "95octane",
+  "author": "OpenServiceFramework",
   "classifications": [ "Web", "Empty" ],
-  "identity": "95octane.Templates.Web.CSharp",
-  "name": "ASP.NET Core Empty (95octane)",
-  "shortName": "95web",
+  "identity": "OpenServiceFramework.Templates.Web.CSharp",
+  "name": "ASP.NET Core Empty (OpenServiceFramework)",
+  "shortName": "osf.web",
   "sourceName": "ProjectName",
   "tags": { "language": "C#", "type": "project" }
 }

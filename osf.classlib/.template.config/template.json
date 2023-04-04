@@ -1,10 +1,10 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "95octane",
+  "author": "OpenServiceFramework",
   "classifications": [ "Common", "Library" ],
-  "identity": "95octane.Templates.ClassLibrary.CSharp",
-  "name": "Class Library (95octane)",
-  "shortName": "95classlib",
+  "identity": "OpenServiceFramework.Templates.ClassLibrary.CSharp",
+  "name": "Class Library (OpenServiceFramework)",
+  "shortName": "osf.classlib",
   "sourceName": "ProjectName",
   "tags": { "language": "C#", "type": "project" }
 }
