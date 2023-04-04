@@ -1,4 +1,4 @@
-TMPLS := 95classlib 95console 95grpc 95web 95worker
+TMPLS := osf.classlib osf.console osf.grpc osf.web osf.worker
 
 .PHONY: all $(TMPLS)
 
