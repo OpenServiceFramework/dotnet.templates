@@ -8,4 +8,5 @@ $(TMPLS):
 	@cp -rv ./common/* ./$@
 	@cp -rv ./common/.github ./$@
 	@cp -rv ./common/.gitignore ./$@
+	@cp -rv ./common/.editorconfig ./$@
 	@cp -rv ./common/.dockerignore ./$@
