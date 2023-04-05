@@ -3,7 +3,7 @@
   <PropertyGroup>
     <PackageType>Template</PackageType>
     <PackageVersion>1.0</PackageVersion>
-    <PackageId>OpenServiceFramework.DotNet.Templates</PackageId>
+    <PackageId>dotnet.templates</PackageId>
     <Title>OpenServiceFramework dotNet Templates</Title>
     <Authors>OSF</Authors>
     <Description>Templates to use when creating an application.</Description>
