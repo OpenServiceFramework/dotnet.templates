@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <PackageId>osf.dotnet.templates</PackageId>
     <Title>OpenServiceFramework: dotNet Templates</Title>
     <Authors>virajp</Authors>
@@ -22,7 +22,7 @@
   <ItemGroup>
     <Content Include="templates/**/*" Exclude="templates/**/bin/**;templates/**/obj/**" />
     <Compile Remove="**/*" />
-    <None Include="templates/README.md" Pack="true" PackagePath="/"/>
+    <None Include="templates/readme.md" Pack="true" PackagePath="/"/>
   </ItemGroup>
 
 </Project>
