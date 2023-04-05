@@ -3,9 +3,6 @@ name: dotNet Templates
 on:
   push:
     branches: [main]
-    paths:
-    - 'templates/**'
-    - 'common/**'
 
 jobs:
   build:
