@@ -2,20 +2,21 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <PackageId>osf.dotnet.templates</PackageId>
-    <Title>OpenServiceFramework dotNet Templates</Title>
-    <Authors>OSF</Authors>
+    <Title>OpenServiceFramework: dotNet Templates</Title>
+    <Authors>virajp</Authors>
+    <Owners>virajp</Owners>
     <Description>Templates to use when creating an application.</Description>
     <PackageTags>dotnet-new;templates;contoso</PackageTags>
-
 		<TargetFramework>net7.0</TargetFramework>
-
+    <Readme>templates/readme.md</Readme>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
     <NoWarn>$(NoWarn);NU5128</NoWarn>
     <NoDefaultExcludes>true</NoDefaultExcludes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
