@@ -5,8 +5,10 @@ TMPLS := osf.classlib osf.console osf.grpc osf.web osf.worker
 all: $(TMPLS)
 
 $(TMPLS):
-	@cp -rv ./common/* ./$@
-	@cp -rv ./common/.github ./$@
-	@cp -rv ./common/.gitignore ./$@
-	@cp -rv ./common/.editorconfig ./$@
-	@cp -rv ./common/.dockerignore ./$@
+	@cp -rv ./common/* ./templates/$@
+	@cp -rv ./common/.gitignore ./templates/$@
+	@cp -rv ./common/.editorconfig ./templates/$@
+	@cp -rv ./common/.dockerignore ./templates/$@
+
+install:
+	@dotnet new install osf.dotnet.templates
