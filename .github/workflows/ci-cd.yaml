@@ -1,0 +1,31 @@
+name: dotNet Templates
+
+on:
+  push:
+    branches: [main]
+    paths:
+    - 'templates/**'
+    - 'common/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET 
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.x'
+        dotnet-quality: 'ga'
+
+    - name: Build
+      run: dotnet pack --output:"./bin" --configuration:"PackRelease" --use-current-runtime --verbosity:"detailed" 
+
+    - name: Publish Nuget to GitHub registry
+      run: dotnet nuget push ./bin/*.nupkg -k ${GITHUB_TOKEN} -s "https://nuget.pkg.github.com/OpenServiceFramework/index.json" --skip-duplicate --no-symbols 
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
