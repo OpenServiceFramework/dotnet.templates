@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
 
@@ -26,7 +26,7 @@ jobs:
         dotnet-quality: 'ga'
 
     - name: Build
-      run: dotnet pack --configuration:"PackRelease" --use-current-runtime --verbosity:"normal"
+      run: dotnet pack --nologo --configuration:"PackRelease" --use-current-runtime --verbosity:"normal"
 
     - name: Publish Nuget to GitHub registry
       run: dotnet nuget push ./bin/**/*.nupkg -k ${GITHUB_TOKEN} -s "https://nuget.pkg.github.com/OpenServiceFramework/index.json" --skip-duplicate --no-symbols 
