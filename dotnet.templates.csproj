@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.4</PackageVersion>
     <PackageId>osf.dotnet.templates</PackageId>
     <Title>OpenServiceFramework: dotNet Templates</Title>
     <Authors>virajp</Authors>
     <Owners>virajp</Owners>
     <Description>Templates to use when creating an application.</Description>
-    <PackageTags>dotnet-new;templates;contoso</PackageTags>
+    <PackageTags>dotnet-new;templates;osf;OpenServiceFramework</PackageTags>
 		<TargetFramework>net7.0</TargetFramework>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <IncludeContentInPack>true</IncludeContentInPack>
@@ -17,6 +17,10 @@
     <NoWarn>$(NoWarn);NU5128</NoWarn>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/OpenServiceFramework/dotnet.templates</RepositoryUrl>
+    <Company>OpenServiceFramework</Company>
+    <Product>dotnet.templates</Product>
+    <PackageIcon/>
   </PropertyGroup>
 
   <ItemGroup>
