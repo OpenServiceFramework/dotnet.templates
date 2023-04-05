@@ -10,7 +10,7 @@
     <Description>Templates to use when creating an application.</Description>
     <PackageTags>dotnet-new;templates;contoso</PackageTags>
 		<TargetFramework>net7.0</TargetFramework>
-    <Readme>templates/readme.md</Readme>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
@@ -20,8 +20,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
-    <Compile Remove="**\*" />
+    <Content Include="templates/**/*" Exclude="templates/**/bin/**;templates/**/obj/**" />
+    <Compile Remove="**/*" />
+    <None Include="templates/README.md" Pack="true" PackagePath="/"/>
   </ItemGroup>
 
 </Project>
