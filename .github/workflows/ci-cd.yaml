@@ -29,6 +29,6 @@ jobs:
       run: dotnet pack --nologo --configuration:"PackRelease" --use-current-runtime --verbosity:"normal"
 
     - name: Publish Nuget to GitHub registry
-      run: dotnet nuget push ./bin/**/*.nupkg -k ${GITHUB_TOKEN} -s "https://nuget.pkg.github.com/OpenServiceFramework/index.json" --skip-duplicate --no-symbols 
+      run: dotnet nuget push ./bin/**/*.nupkg -k ${NUGET_ACCESS_TOKEN} --source "nuget.org" --skip-duplicate --no-symbols 
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NUGET_ACCESS_TOKEN: ${{ secrets.NUGET_ACCESS_TOKEN }}
