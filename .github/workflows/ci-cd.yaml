@@ -23,9 +23,9 @@ jobs:
         dotnet-quality: 'ga'
 
     - name: Build
-      run: dotnet pack --output:"./bin" --configuration:"PackRelease" --use-current-runtime --verbosity:"detailed" 
+      run: dotnet pack --configuration:"PackRelease" --use-current-runtime --verbosity:"normal"
 
     - name: Publish Nuget to GitHub registry
-      run: dotnet nuget push ./bin/*.nupkg -k ${GITHUB_TOKEN} -s "https://nuget.pkg.github.com/OpenServiceFramework/index.json" --skip-duplicate --no-symbols 
+      run: dotnet nuget push ./bin/**/*.nupkg -k ${GITHUB_TOKEN} -s "https://nuget.pkg.github.com/OpenServiceFramework/index.json" --skip-duplicate --no-symbols 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
