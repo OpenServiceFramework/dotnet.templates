@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.4</PackageVersion>
+    <PackageVersion>1.0.5</PackageVersion>
     <PackageId>osf.dotnet.templates</PackageId>
     <Title>OpenServiceFramework: dotNet Templates</Title>
     <Authors>virajp</Authors>
@@ -20,13 +20,14 @@
     <RepositoryUrl>https://github.com/OpenServiceFramework/dotnet.templates</RepositoryUrl>
     <Company>OpenServiceFramework</Company>
     <Product>dotnet.templates</Product>
-    <PackageIcon/>
+    <PackageIcon>osf.jpg</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Include="templates/**/*" Exclude="templates/**/bin/**;templates/**/obj/**" />
     <Compile Remove="**/*" />
     <None Include="docs/readme.md" Pack="true" PackagePath="/"/>
+    <None Include="docs/osf.jpg" Pack="true" PackagePath="/"/>
   </ItemGroup>
 
 </Project>
