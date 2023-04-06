@@ -6,5 +6,19 @@
   "name": "Console App (OpenServiceFramework)",
   "shortName": "osf.console",
   "sourceName": "ProjectName",
-  "tags": { "language": "C#", "type": "project" }
+  "tags": { "language": "C#", "type": "project" },
+  "constraints": {
+    "support-os": {
+      "type": "os",
+      "args": [ "Linux", "OSX" ]
+    },
+    "support-sdk": {
+      "type": "sdk-version",
+      "args": [ "7.*" ]
+   },
+   "csharp": {
+    "type": "project-capability",
+    "args": "CSharp"
+    }
+  }
 }
